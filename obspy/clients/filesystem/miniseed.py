@@ -73,11 +73,11 @@ class _MSRIDataSegment(_ExtractedDataSegment):
         :type loglevel: str
         :param loglevel: logging verbosity
         """
-        numeric_level = getattr(logging, loglevel.upper(), None)
-        if not isinstance(numeric_level, int):
-            raise ValueError('Invalid log level: %s' % loglevel)
-        logging.basicConfig(level=numeric_level)
-        logger.setLevel(numeric_level)
+#        numeric_level = getattr(logging, loglevel.upper(), None)
+#        if not isinstance(numeric_level, int):
+#            raise ValueError('Invalid log level: %s' % loglevel)
+#        logging.basicConfig(level=numeric_level)
+#        logger.setLevel(numeric_level)
 
         self.msri = msri
         self.sample_rate = sample_rate
@@ -173,12 +173,12 @@ class _MiniseedDataExtractor(object):
         :type loglevel: str
         :param loglevel: logging verbosity
         """
-        self.loglevel = loglevel
-        numeric_level = getattr(logging, loglevel.upper(), None)
-        if not isinstance(numeric_level, int):
-            raise ValueError('Invalid log level: %s' % loglevel)
-        logging.basicConfig(level=numeric_level)
-        logger.setLevel(numeric_level)
+#        self.loglevel = loglevel
+#        numeric_level = getattr(logging, loglevel.upper(), None)
+#        if not isinstance(numeric_level, int):
+#            raise ValueError('Invalid log level: %s' % loglevel)
+#        logging.basicConfig(level=numeric_level)
+#        logger.setLevel(numeric_level)
 
         if dp_replace:
             self.dp_replace_re = re.compile(dp_replace[0])
@@ -306,8 +306,7 @@ class _MiniseedDataExtractor(object):
                                            nrow.samplerate,
                                            nrow.starttime,
                                            nrow.endtime,
-                                           nrow.srcname,
-                                           loglevel=self.loglevel)
+                                           nrow.srcname)
 
                     # Check for passing end offset
                     if (offset + msri.msr.contents.reclen) >= \

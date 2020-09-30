@@ -221,11 +221,11 @@ class Client(object):
         :type loglevel: str
         :param loglevel: logging verbosity
         """
-        numeric_level = getattr(logging, loglevel.upper(), None)
-        if not isinstance(numeric_level, int):
-            raise ValueError('Invalid log level: %s' % loglevel)
-        logging.basicConfig(level=numeric_level)
-        logger.setLevel(numeric_level)
+#        numeric_level = getattr(logging, loglevel.upper(), None)
+#        if not isinstance(numeric_level, int):
+#            raise ValueError('Invalid log level: %s' % loglevel)
+#        logging.basicConfig(level=numeric_level)
+#        logger.setLevel(numeric_level)
 
         # setup handler for database
         if isinstance(database, str):
@@ -957,11 +957,11 @@ class Indexer(object):
         :type loglevel: str
         :param loglevel: logging verbosity
         """
-        numeric_level = getattr(logging, loglevel.upper(), None)
-        if not isinstance(numeric_level, int):
-            raise ValueError('Invalid log level: %s' % loglevel)
-        logging.basicConfig(level=numeric_level)
-        logger.setLevel(numeric_level)
+#        numeric_level = getattr(logging, loglevel.upper(), None)
+#        if not isinstance(numeric_level, int):
+#            raise ValueError('Invalid log level: %s' % loglevel)
+#        logging.basicConfig(level=numeric_level)
+#        logger.setLevel(numeric_level)
 
         self.index_cmd = index_cmd
         if bulk_params is None:
@@ -1270,11 +1270,11 @@ class TSIndexDatabaseHandler(object):
         :type loglevel: str
         :param loglevel: logging verbosity
         """
-        numeric_level = getattr(logging, loglevel.upper(), None)
-        if not isinstance(numeric_level, int):
-            raise ValueError('Invalid log level: %s' % loglevel)
-        logging.basicConfig(level=numeric_level)
-        logger.setLevel(numeric_level)
+#        numeric_level = getattr(logging, loglevel.upper(), None)
+#        if not isinstance(numeric_level, int):
+#            raise ValueError('Invalid log level: %s' % loglevel)
+#        logging.basicConfig(level=numeric_level)
+#        logger.setLevel(numeric_level)
 
         self.tsindex_table = tsindex_table
         self.tsindex_summary_table = tsindex_summary_table
